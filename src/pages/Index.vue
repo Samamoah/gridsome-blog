@@ -1,31 +1,12 @@
 <template>
   <Layout>
-    
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-    
-    <h1>Hello, world!</h1>
-   
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
-    <div v-for="post in $page.posts.edges" :key="post.node.id" >
-      <g-link :to="post.node.path">
-        <h1 >{{post.node.title}} </h1>
-
-      </g-link>
-
+    <div class="main-container">
+      <div v-for="post in $page.posts.edges" :key="post.node.id" >
+        <Card v-bind:post="post"/>
+      </div>
     </div>
-
   </Layout>
 </template>
-
 
 
 <page-query>
@@ -45,15 +26,29 @@ query Posts{
 
 
 <script>
+
+import Card from '../components/Card'
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Welcome'
+  },
+  components: {
+    Card
   }
 }
 </script>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
+<style s>
+    .main-container{
+    margin: 2em 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .main-container{
+      display: block
+    }
+  }
 </style>

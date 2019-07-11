@@ -1,7 +1,8 @@
 <template>
   <Layout> 
-  
-    <div v-html="$page.post.content"/>
+    <div class="content container" >
+      <div v-html="$page.post.content"/>
+    </div>
 
   </Layout>
 </template>
@@ -24,8 +25,14 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title
-
     }
   }
 }
 </script>
+
+<style>
+  .content{
+    font-family: 'Roboto';
+    margin: 2em;
+  }
+</style>

@@ -5,15 +5,20 @@ title : first blog
 
 
 
-**Hello World**
+**Bold**
+**first blog**
 
-_Good Woo=rk_
+_italics_
 
 ```js
-Fhshhshd wsnnuussnuqns
+console.log('Hello World')
 
 ```
+ 
+List 
 
 *jjjsjs]
 *jsjjsjjsj
-(Good Boy)[www.youtube.com]
+
+
+[Youtube](www.youtube.com)

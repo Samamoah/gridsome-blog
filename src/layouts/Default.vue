@@ -2,8 +2,7 @@
   <div class="layout">
     <header>
         <div>
-            <g-link to="/"><img src="images/Logo.svg"></g-link>
-            
+            <g-link to="/"><img src="images/Logo.svg"></g-link>    
         </div>
         <nav>
             <ul>
